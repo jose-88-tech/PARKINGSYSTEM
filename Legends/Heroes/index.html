@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heroes — Parking Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>MY PARKINNG </h1>
+  </header>
+  <main class="container">
+    <section class="left">
+      <div class="control-panel">
+        <h2>Control Panel</h2>
+        <form id="vehicle-form">
+          <label>Vehicle ID: <input id="vehicle-id" required></label>
+          <label>Size: <select id="vehicle-size"><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option></select></label>
+          <div class="actions">
+            <button type="submit">Process Entry</button>
+            <button type="button" id="release-btn">Process Exit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="stats-panel">
+        <h2>Stats</h2>
+        <div class="stats">
+          <div>Total: <span id="stat-total">0</span></div>
+          <div>Available: <span id="stat-available">0</span></div>
+          <div>Occupied: <span id="stat-occupied">0</span></div>
+        </div>
+      </div>
+
+      <div class="log-panel">
+        <h2>Activity Log</h2>
+        <ul id="activity-log"></ul>
+      </div>
+    </section>
+
+    <section class="right">
+      <h2>Dashboard Grid</h2>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
